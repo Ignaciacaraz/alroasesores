@@ -454,66 +454,84 @@ body.dark .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 
 
-/* #Media
-================================================== */
+@media (max-width: 767px) {
+    /* Ajustes generales de tipografía y navegación */
+    h1 {
+        font-size: 38px;
+    }
+    .nav-item:after {
+        display: none;
+    }
+    .nav-item::before {
+        position: absolute;
+        display: block;
+        top: 15px;
+        left: 0;
+        width: 11px;
+        height: 1px;
+        content: "";
+        border: none;
+        background-color: #000;
+        vertical-align: 0;
+    }
+    .dropdown-toggle::after {
+        position: absolute;
+        display: block;
+        top: 10px;
+        left: -23px;
+        width: 1px;
+        height: 11px;
+        content: "";
+        border: none;
+        background-color: #000;
+        vertical-align: 0;
+        transition: all 200ms linear;
+    }
+    .dropdown-toggle[aria-expanded="true"]::after {
+        transform: rotate(90deg);
+        opacity: 0;
+    }
+    .dropdown-menu {
+        padding: 0 !important;
+        background-color: transparent;
+        box-shadow: none;
+        transition: all 200ms linear;
+    }
+    .dropdown-toggle[aria-expanded="true"] + .dropdown-menu {
+        margin-top: 10px !important;
+        margin-bottom: 20px !important;
+    }
+    body.dark .nav-item::before {
+        background-color: #fff;
+    }
+    body.dark .dropdown-toggle::after {
+        background-color: #fff;
+    }
+    body.dark .dropdown-menu {
+        background-color: transparent;
+        box-shadow: none;
+    }
 
-@media (max-width: 767px) { 
-	h1{
-		font-size: 38px;
-	}
-	.nav-item:after{
-		display: none;
-	}
-	.nav-item::before {
-		position: absolute;
-		display: block;
-		top: 15px;
-		left: 0;
-		width: 11px;
-		height: 1px;
-		content: "";
-		border: none;
-		background-color: #000;
-		vertical-align: 0;
-	}
-	.dropdown-toggle::after {
-		position: absolute;
-		display: block;
-		top: 10px;
-		left: -23px;
-		width: 1px;
-		height: 11px;
-		content: "";
-		border: none;
-		background-color: #000;
-		vertical-align: 0;
-		transition: all 200ms linear;
-	}
-	.dropdown-toggle[aria-expanded="true"]::after{
-		transform: rotate(90deg);
-		opacity: 0;
-	}
-	.dropdown-menu {
-		padding: 0 !important;
-		background-color: transparent;
-		box-shadow: none;
-		transition: all 200ms linear;
-	}
-	.dropdown-toggle[aria-expanded="true"] + .dropdown-menu {
-		margin-top: 10px !important;
-		margin-bottom: 20px !important;
-	}
-	body.dark .nav-item::before {
-		background-color: #fff;
-	}
-	body.dark .dropdown-toggle::after {
-		background-color: #fff;
-	}
-	body.dark .dropdown-menu {
-		background-color: transparent;
-		box-shadow: none;
-	}
+    /* Ajustes específicos para las tarjetas de la sección "Seguros" */
+    #seguros .d-flex {
+        flex-direction: column; /* Apila las tarjetas verticalmente */
+        align-items: center; /* Centra las tarjetas */
+        gap: 20px; /* Espacio entre las tarjetas */
+    }
+
+    #seguros .card {
+        width: 100%; /* Las tarjetas ocupan todo el ancho disponible */
+        max-width: 350px; /* Limita el ancho máximo para evitar que sean demasiado grandes */
+        margin-bottom: 20px; /* Espacio entre las tarjetas */
+    }
+
+    #seguros .card img {
+        width: 100%; /* Asegura que las imágenes se adapten al ancho de las tarjetas */
+        height: auto;
+    }
 }
+
+
 
 /* #Link to page
 ================================================== */
@@ -760,3 +778,96 @@ body.dark .section-title {
 .footer p {
     margin-bottom: 0;
 }
+
+/* Estilo para la sección de Seguros para ocupar más espacio */
+.seguros-full-height {
+    min-height: 60vh; /* Ajusta este valor según el espacio que quieras ocupar */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+#seguros {
+    flex: 1;
+}
+
+/* Asegúrate de que la sección inicial tenga una altura adecuada */
+.full-height {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#seguros{
+	min-height: 80vh;
+
+}
+
+.section {
+    padding: 5rem 0; /* Aumenta el padding superior e inferior para agrandar la sección */
+}
+
+.feature-card {
+    width: 22rem; /* Aumenta el ancho de las tarjetas */
+    text-align: center; /* Centra el texto dentro de las tarjetas */
+    margin: 1rem; /* Aumenta el margen entre las tarjetas */
+}
+
+.feature-card img {
+    width: 5rem; /* Aumenta el tamaño de las imágenes */
+    height: auto; /* Mantiene la relación de aspecto */
+    margin-bottom: 1rem; /* Aumenta el espacio debajo de las imágenes */
+}
+
+.feature-card h3 {
+    font-size: 1.5rem; /* Aumenta el tamaño de la fuente de los encabezados */
+    margin-bottom: 0.5rem; /* Aumenta el margen debajo de los encabezados */
+}
+
+.feature-card p {
+    font-size: 1.1rem; /* Aumenta el tamaño de la fuente del texto */
+}
+
+/* Estilos para el modo oscuro */
+body.dark .card {
+    background-color: #2c2c2c; /* Color de fondo oscuro para las tarjetas */
+    border: 1px solid #444; /* Borde más oscuro para las tarjetas */
+}
+
+body.dark .card-title, 
+body.dark .card-text {
+    color: #fff; /* Color del texto blanco para las tarjetas */
+}
+.card {
+	width: 100%;
+	max-width: 300px; /* Ajusta el valor según sea necesario */
+	margin: 10px;
+  }
+
+  .card-container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px; /* Ajusta el espacio entre las tarjetas */
+  }
+  
+  .card {
+	flex: 1 1 200px; /* Ajusta el valor mínimo y máximo del ancho de la tarjeta */
+  }
+  .card-content {
+	padding: 15px;
+	box-sizing: border-box; /* Asegúrate de que el padding no afecte el tamaño */
+  }
+  

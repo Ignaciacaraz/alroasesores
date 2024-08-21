@@ -41,37 +41,24 @@
 			}
 	});	
 	
-	// Switch light/dark mode
-	
-	$("#switch").on('click', function () {
-		if ($("body").hasClass("dark")) {
-			$("body").removeClass("dark");
-			$("#switch").removeClass("switched");
-		}
-		else {
-			$("body").addClass("dark");
-			$("#switch").addClass("switched");
-		}
-	});  
+	// poner modo oscuro
+	$("body").addClass("dark");
 
     // Enlace de WhatsApp
-const whatsappLink = "https://wa.me/tuNumeroDeTelefono";
+	const whatsappLink = "https://wa.me/tuNumeroDeTelefono";
 
-// Función para actualizar los enlaces de los botones
-function updateButtonLinks() {
-    // Selecciona todos los botones de contratar
-    const buttons = document.querySelectorAll('.btn-contratar');
+	// Función para actualizar los enlaces de los botones
+	function updateButtonLinks() {
+	    // Selecciona todos los botones de contratar
+	    const buttons = document.querySelectorAll('.btn-contratar');
 
-    // Actualiza el atributo href de cada botón
-    buttons.forEach(button => {
-        button.href = whatsappLink;
-    });
-}
+	    // Actualiza el atributo href de cada botón
+	    buttons.forEach(button => {
+	        button.href = whatsappLink;
+	    });
+	}
 
-// Llama a la función después de que el contenido de la página se haya cargado
-document.addEventListener('DOMContentLoaded', updateButtonLinks);
-
-
-
+	// Llama a la función después de que el contenido de la página se haya cargado
+	document.addEventListener('DOMContentLoaded', updateButtonLinks);
 	
 })(jQuery);
