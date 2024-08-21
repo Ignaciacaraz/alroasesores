@@ -536,3 +536,227 @@ body.dark .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 body.dark .logo img {
   filter: brightness(100%);
 }
+
+/* Custom button size and spacing */
+.btn-sm {
+    padding: 0.25rem 0.5rem; /* Smaller padding */
+    font-size: 0.875rem; /* Smaller font size */
+    line-height: 1.5; /* Line height adjustment */
+    border-radius: 0.2rem; /* Slightly smaller border radius */
+}
+
+/* Add margin to the button */
+.card-body .btn-sm {
+    margin-top: 10px; /* Space between button and text */
+}
+
+/* Center the button within the card body */
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    text-align: center; /* Center text for consistency */
+}
+/* Title styling */
+.section-title {
+    font-size: 2rem; /* Adjust size as needed */
+    font-weight: bold;
+    margin-bottom: 20px; /* Space between title and cards */
+    text-align: center; /* Center the title */
+}
+.section {
+    margin: 0 auto; /* Centra la sección en su contenedor */
+    max-width: 1200px; /* Ancho máximo para mantener la consistencia */
+    padding: 20px; /* Espacio interno alrededor de la sección */
+}
+
+.section-title {
+    font-size: 2rem; /* Tamaño del texto */
+    font-weight: bold; /* Negrita */
+    margin-bottom: 20px; /* Espacio entre el título y las tarjetas */
+    text-align: center; /* Centrar el texto */
+    color: #212121; /* Color del texto */
+}
+
+body.dark .section-title {
+    color: #fff; /* Color del texto en modo oscuro */
+}
+
+.d-flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000; /* Asegúrate de que el botón esté por encima de otros elementos */
+}
+
+.whatsapp-button img {
+    width: 50px; /* Ajusta el tamaño del icono según sea necesario */
+    height: auto;
+    border-radius: 50%; /* Opcional: hace que el icono sea redondeado */
+}
+
+/* Estilos para la sección "¿Por qué elegirnos?" */
+.why-choose-us-section {
+    background-color: #f9f9f9; /* Color de fondo claro para la sección */
+    padding: 40px 20px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    margin-top: 40px; /* Espacio superior para separar de secciones anteriores */
+}
+
+/* Título de la sección */
+.why-choose-us-section .section-title {
+    font-size: 2rem; /* Tamaño del texto */
+    font-weight: bold; /* Negrita */
+    color: #212121; /* Color del texto */
+    margin-bottom: 20px; /* Espacio inferior */
+}
+
+/* Estilos para las características individuales */
+.feature {
+    text-align: center; /* Centra el texto */
+    margin-bottom: 20px; /* Espacio inferior entre características */
+}
+
+.feature-title {
+    font-size: 1.5rem; /* Tamaño del texto */
+    font-weight: bold; /* Negrita */
+    color: #8167a9; /* Color del texto para el título */
+    margin-bottom: 10px; /* Espacio inferior */
+}
+
+.feature-description {
+    font-size: 1rem; /* Tamaño del texto */
+    color: #212121; /* Color del texto */
+    margin: 0; /* Sin margen */
+}
+
+/* Alineación y diseño de flexbox para las características */
+.d-flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+@media (max-width: 767px) {
+    .why-choose-us-section {
+        padding: 20px; /* Menos espaciado en pantallas pequeñas */
+    }
+}
+.feature-card {
+    text-align: center;
+    width: 22%; /* Ajusta el ancho de las tarjetas según sea necesario */
+    margin: 10px;
+}
+
+.feature-card img {
+    width: 60px; /* Ajusta el tamaño del icono según sea necesario */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.feature-card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #212121;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.justify-content-around {
+    justify-content: space-around;
+}
+
+.map-container {
+    width: 100%;
+    max-width: 600px; /* Ajusta el ancho máximo del mapa */
+    margin: 0 auto; /* Centra el mapa en la página */
+    position: relative;
+    padding-bottom: 56.25%; /* Proporción 16:9 */
+    height: 0;
+    overflow: hidden;
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px; /* Ajusta la altura del mapa */
+}
+
+.footer {
+    background-color: #f8f9fa; /* Color de fondo claro */
+}
+
+.footer h5 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.footer ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+.footer ul li a {
+    text-decoration: none;
+    color: #007bff; /* Color de enlace */
+}
+
+.footer ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer .list-unstyled d-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer .list-unstyled d-flex li {
+    margin-right: 1rem;
+}
+
+.footer p {
+    margin-bottom: 0;
+}
