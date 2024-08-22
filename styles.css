@@ -509,7 +509,10 @@ body.dark .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
         background-color: transparent;
         box-shadow: none;
     }
-
+    .d-flex {
+        flex-direction: column;
+        align-items: center;
+    }
 
 }
 
