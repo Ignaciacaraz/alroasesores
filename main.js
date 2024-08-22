@@ -1,4 +1,3 @@
-/* Please ❤ this if you like it! */
 
 (function($) { 
 	"use strict";
@@ -30,7 +29,7 @@
 		});
 	});
 
-	// Menu On Hover
+	// Menu 
 		
 	$('body').on('mouseenter mouseleave','.nav-item',function(e){
 			if ($(window).width() > 750) {
