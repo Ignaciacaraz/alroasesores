@@ -60,4 +60,27 @@
 	// Llama a la función después de que el contenido de la página se haya cargado
 	document.addEventListener('DOMContentLoaded', updateButtonLinks);
 	
+	$(document).ready(function() {
+		// Suavizar el desplazamiento al hacer clic en los enlaces de navegación
+		$('a.nav-link, a.dropdown-item').on('click', function(event) {
+			// Asegurarse de que el enlace tenga un destino de desplazamiento
+			if (this.hash !== "") {
+				// Prevenir el comportamiento predeterminado del clic
+				event.preventDefault();
+	
+				// Almacenar el destino del enlace
+				var hash = this.hash;
+	
+				// Realizar la transición suave
+				$('html, body').animate({
+					scrollTop: $(hash).offset().top
+				}, 800, function(){
+					// Agregar el hash a la URL después de la animación
+					window.location.hash = hash;
+				});
+			}
+		});
+	});
+	
+
 })(jQuery);

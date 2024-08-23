@@ -856,3 +856,13 @@ body.dark .card-text {
 	box-sizing: border-box; /* Asegúrate de que el padding no afecte el tamaño */
   }
   
+  .card-img-top {
+    width: 100%; /* Asegúrate de que la imagen ocupe todo el ancho de la tarjeta */
+    height: 200px; /* Ajusta la altura según tus necesidades */
+    object-fit: cover; /* Esto asegura que la imagen llene el contenedor sin distorsionar */
+}
+.navbar-brand img {
+    width: 50px; /* Ajusta el tamaño según tus necesidades */
+    height: 50px; /* Ajusta el tamaño según tus necesidades */
+    border-radius: 50%; /* Redondea la imagen en forma de círculo */
+}
